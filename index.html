@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listahan Ng Anime Manga & Manhwa - Track Your Anime & Manga</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <h2>Loading Your Memories...</h2>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <h1>Listahan Ng Anime Manga & Manhwa</h1>
+            </div>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search anime, manga, or manhwa...">
+                <i class="fas fa-search"></i>
+            </div>
+            <button id="add-new-btn" class="btn-primary">
+                <i class="fas fa-plus"></i> Add New
+            </button>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="#" data-category="all" class="active">All</a></li>
+                <li><a href="#" data-category="currently-watching">Currently Watching</a></li>
+                <li><a href="#" data-category="completed">Completed</a></li>
+                <li><a href="#" data-category="dropped">Dropped</a></li>
+                <li><a href="#" data-category="plan-to-watch">Plan to Watch</a></li>
+                <li><a href="#" data-category="manga">Manga</a></li>
+                <li><a href="#" data-category="manhwa">Manhwa</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div id="content-grid" class="content-grid">
+                <!-- Content will be dynamically loaded here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Add/Edit Item Modal -->
+    <div id="item-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title">Add New Item</h2>
+                <span class="close">&times;</span>
+            </div>
+            <form id="item-form">
+                <input type="hidden" id="item-id">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="type">Type</label>
+                    <select id="type" required>
+                        <option value="anime">Anime</option>
+                        <option value="manga">Manga</option>
+                        <option value="manhwa">Manhwa</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status" required>
+                        <option value="currently-watching">Currently Watching/Reading</option>
+                        <option value="completed">Completed</option>
+                        <option value="dropped">Dropped</option>
+                        <option value="plan-to-watch">Plan to Watch/Read</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="image-url">Image URL</label>
+                    <input type="text" id="image-url" required>
+                </div>
+                <div class="form-group">
+                    <label for="video-url">YouTube Video ID</label>
+                    <input type="text" id="video-url" placeholder="e.g., dQw4w9WgXcQ">
+                </div>
+                <div class="form-group">
+                    <label for="site-url">Official Site URL (optional)</label>
+                    <input type="text" id="site-url" placeholder="https://...">
+                </div>
+                <div class="form-group">
+                    <label for="notes">Notes</label>
+                    <textarea id="notes" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Save Item</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="modal">
+        <div class="modal-content video-container">
+            <span class="close">&times;</span>
+            <div id="video-player"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Anime Memories</h3>
+                    <p>This website was created to help me remember the titles of anime, manga, and manhwa that I've watched or plan to watch. I often forget titles, so this serves as my personal memory aid.</p>
+                    <div class="quick-links">
+                        <h4>Quick Links</h4>
+                        <a href="https://myanimelist.net" target="_blank">MyAnimeList</a>
+                        <a href="https://anilist.co" target="_blank">AniList</a>
+                        <a href="https://webtoons.com" target="_blank">Webtoons</a>
+                        <a href="https://mangadex.org" target="_blank">MangaDex</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Developer</h3>
+                    <p>Created with <i class="fas fa-heart"></i> by Mark Joseph Tabugon Rogasan</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Listahan Ng Anime Manga & Manhwa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
