@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listahan Ng Anime Manga & Manhwa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="loading-screen" id="loadingScreen">
+        <img src="icon.png" alt="Loading Screen">
+        <div class="loading-spinner"></div>
+        <p>Loading your memories...</p>
+    </div>
+
+    <div class="container hidden" id="mainContent">
+        <header>
+            <h1>Listahan Ng Anime Manga & Manhwa</h1>
+            <p>Never forget your favorite titles again</p>
+        </header>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="anime.html">Anime</a></li>
+                <li><a href="manga.html">Manga</a></li>
+                <li><a href="manhwa.html">Manhwa</a></li>
+            </ul>
+        </nav>
+
+        
+
+        <main>
+            <section class="welcome-section">
+                <h2>Welcome to Your Memory List</h2>
+                <p>This website helps you keep track of all the anime, manga, and manhwa you've watched or read. Never forget a title again!</p>
+                
+                <div class="stats">
+                    <div class="stat-card">
+                        <h3 id="animeCount">0</h3>
+                        <p>Anime Titles</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="mangaCount">0</h3>
+                        <p>Manga Titles</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="manhwaCount">0</h3>
+                        <p>Manhwa Titles</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recently-added">
+                <h2>Recently Added</h2>
+                <div class="items-grid" id="recentItems">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About This Website</h3>
+                    <p>This website was created to help remember all the anime, manga, and manhwa titles I've enjoyed over the years. So many great stories deserve to be remembered!</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Developer</h3>
+                    <p>Created by Mark Joseph Tabugon Rogasan</p>
+                    <p>For inquiries: mjrogasan@example.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="anime.html">Anime</a></li>
+                        <li><a href="manga.html">Manga</a></li>
+                        <li><a href="manhwa.html">Manhwa</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Listahan Ng Anime Manga & Manhwa. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
